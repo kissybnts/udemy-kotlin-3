@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.kissybnts.swoosh.SkillActivity">
+    tools:context="com.kissybnts.swoosh.controller.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton4"
+            android:id="@+id/beginnerSkillButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -70,10 +70,12 @@
             android:text="@string/beginner"
             android:textColor="@android:color/background_light"
             android:textOff="@string/beginner"
-            android:textOn="@string/beginner" />
+            android:textOn="@string/beginner"
+            android:onClick="onBeginnerClicked"
+            />
 
         <ToggleButton
-            android:id="@+id/toggleButton5"
+            android:id="@+id/ballerSkillButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -83,11 +85,13 @@
             android:text="@string/baller"
             android:textColor="@android:color/background_light"
             android:textOff="@string/baller"
-            android:textOn="@string/baller" />
+            android:textOn="@string/baller"
+            android:onClick="onBallerClicked"
+            />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/skillFinishButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
@@ -99,5 +103,7 @@
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="onSkillFinishClicked"
+        />
 </android.support.constraint.ConstraintLayout>
